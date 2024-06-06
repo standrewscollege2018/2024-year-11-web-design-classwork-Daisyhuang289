@@ -1,0 +1,7 @@
+/* Overide a tag's presets by entering its name */
+body {
+    background-color: darkblue;
+}
+p {
+    color: cornflowerblue;
+}

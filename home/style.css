@@ -1,0 +1,34 @@
+@font-face {
+    font-family: lemon;
+    src: url(Fonts/LEMONMILK-Light.otf);
+}
+@font-face {
+    font-family: KOLAK;
+    src: url(Fonts/KOLAK.otf);
+}
+@font-face {
+    font-family: mightest;
+    src: url(Fonts/Mightiest.ttf);
+}
+@font-face {
+    font-family: philosopher;
+    src: url(Fonts/Philosopher-Regular.ttf);
+}
+@font-face{
+    font-family: saudagar;
+    src: url(Fonts/Saudagar.ttf);
+}
+body{
+    background-color: #6D89C5;
+    color: #F4EBD9
+}
+h1{
+    font-family: lemon, KOLAK, mightest;
+}
+h2{
+    font-family: mightest, philosopher, saudagar;
+    font-size: medium;
+}
+li{
+    font-family: mightest, philosopher, saudagar;
+}

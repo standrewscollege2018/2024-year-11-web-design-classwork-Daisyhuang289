@@ -1,19 +1,26 @@
 * {
     margin: 0px;
     padding: 0%;
-    background-color: white;
+    background-color: #f2f4f3;
 }
-h3, p, li, h2 {
-    color: 386fa4;
+h3, p {
+    color: #3f4aa3;
+    padding-left: 50px;
 }
-h1 {
+ul{
+    list-style: circle;
+    color: #3f4aa3;
+    padding-left: 50px;
+}
+h1, h2 {
     color: 0b132b;
+    padding: 10px, 0px, 5px, 20px;
 }
 a:link, a:visited {
-    color: be97c6;
+    color: 1f01b9;
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
-    color: efbcd5;
+    color: 80a4ed;
 }

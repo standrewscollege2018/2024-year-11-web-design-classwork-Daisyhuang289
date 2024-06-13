@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0%;
+    background-color: white;
+}
+h3, p, li, h2 {
+    color: 386fa4;
+}
+h1 {
+    color: 0b132b;
+}
+a:link, a:visited {
+    color: be97c6;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: efbcd5;
+}

@@ -39,3 +39,48 @@ They start with a period (.) */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20pt;
 }
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-ft, minmax(400px, 1fr));
+    margin: 10px;
+}
+.main-content {
+    background-color: cadetblue;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid white;
+}
+.secondary-content {
+    background-color: blanchedalmond;
+    margin: 20px;
+    padding: 15px;
+}
+.main-content img {
+    max-width: 100%;
+    height: auto;
+}
+.mq-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.intro {
+    padding: 15px;
+}
+.main {
+    padding: 15px;
+}
+/* The media query enables us to change the rules of some tages or classes
+based on the screen size.
+In this case, the rules inside the media query will come into effect
+when the screen size drops below 800px */
+@media only screen and (max-width: 800px){
+    .mq-container{
+        grid-template-columns: 1fr;
+    }
+    .intro {
+        background-color: cornflowerblue;
+        border: 2px white solid;
+    }
+}

